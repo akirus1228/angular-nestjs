@@ -246,19 +246,6 @@ curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh
 sudo bash nodesource_setup.sh
 sudo apt install nodejs
 sudo apt install git
-git config --global user.name "yantrab"
-git config --global user.email "yantrab@gmail.com"
-mkdir tador
-cd tador
-git clone https://github.com/yantrab/nest-angular.git
-cd nest-angular
-npm i
-
-// copy dist from windows
-
-scp -r dist yaniv@128.199.41.162:/home/yaniv/tador/nest-angular/client
-scp -r dist yaniv@178.62.237.25:/home/yaniv/tador/nest-angular/client
-
 sudo npm install pm2@latest -g
 cd server
 pm2 start npm -- start
